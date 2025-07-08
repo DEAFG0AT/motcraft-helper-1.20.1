@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "motcraft-helper",
+	"version": "${version}",
+	"name": "MOTCRAFT HELPER",
+	"description": "This is a helper mod for the MOTCRAFT modpack. It adds supplementary content to existing mods, removes duplicates where appropriate, and modifies biome generation since 2025.",
+	"authors": [
+		"DE4FG0AT, MOT"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/motcraft-helper/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.mot.motcrafthelper.MOTCRAFTHELPER"
+		],
+		"client": [
+			"com.mot.motcrafthelper.MOTCRAFTHELPERClient"
+		],
+		"fabric-datagen": [
+			"com.mot.motcrafthelper.MOTCRAFTHELPERDataGenerator"
+		]
+	},
+	"mixins": [
+		"motcraft-helper.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
