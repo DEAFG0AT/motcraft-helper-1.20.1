@@ -20,7 +20,17 @@ repositories {
 		name = 'TerraformersMC'
 		url = 'https://maven.terraformersmc.com/'
 	}
+	maven {
+		name = 'Modrinth'
+		url = 'https://api.modrinth.com/maven'
+	}
+	maven {
+		name = 'Curse'
+		url = 'https://maven.minecraftforge.net'
+	}
 }
+
+
 
 fabricApi {
 	configureDataGeneration {
@@ -37,13 +47,27 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	// Biolith.
+	// Biolith
 	modImplementation("com.terraformersmc:biolith-fabric:${project.biolith_version}") {
-			exclude(group: "com.github.glitchfiend")
+		exclude(group: "com.github.glitchfiend")
+
+	// Regions Unexplored
+	modImplementation("maven.modrinth:Tkikq67H:rhE8MT9Z")
+
+	// Nature's Spirit 2.2.4-1.20.1 Fabric
+	modImplementation("maven.modrinth:WBvnqHfV:jkn2P7N5")
+
+	// TerraBlender
+	modImplementation("maven.modrinth:kkmrDlKT:J1S3aA8i")
+
+	// Forge Config API Port
+	modImplementation("maven.modrinth:ohNO6lps:1aKtMQZE")
 	}
 
-
 }
+
+
+
 
 processResources {
 	inputs.property "version", project.version

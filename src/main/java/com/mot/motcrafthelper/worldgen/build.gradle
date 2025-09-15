@@ -1,0 +1,13 @@
+archives_base_name = 'motcraft-helper-worldgen'
+
+loom {
+    accessWidenerPath = file("src/main/resources/motcraft-helper-worldgen.accesswidener")
+}
+
+dependencies {
+    // Biolith and Terrablender for the worldgen API modules
+    modImplementation "com.terraformersmc:biolith-fabric:${biolith_version}"
+    modCompileOnlyApi "com.github.glitchfiend:Terrablender-fabric:${terrablender_version}"
+
+    implementation project(path: 'motcraft-helper')
+}
